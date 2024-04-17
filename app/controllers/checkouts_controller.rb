@@ -12,7 +12,7 @@ class CheckoutsController < ApplicationController
         return
       end
 
-      { 
+      {
         quantity: item["quantity"].to_i,
         price_data: { 
           product_data: {
@@ -22,7 +22,7 @@ class CheckoutsController < ApplicationController
           currency: "usd",
           unit_amount: item["price"].to_i
         }
-      } 
+      }
     end
 
     puts "line_items: #{line_items}"
