@@ -2,13 +2,13 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @products = @category.products
+                         .max_price(price_params[:max])
+                         .min_price(price_params[:min])
+  end
 
-    if params[:max].present?
-      @products = @products.where("price <= ?", params[:max])
-    end
+  private
 
-    if params[:min].present?
-      @products = @products.where("price >= ?", params[:min])
-    end
+  def price_params
+    params.permit(:max, :min)
   end
 end
