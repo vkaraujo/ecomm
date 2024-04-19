@@ -29,3 +29,41 @@
 
 en:
   hello: "Hello world"
+  admin:
+    categories:
+      create:
+        success: "Category was successfully created"
+        failure: "Category could not be created"
+      update:
+        success: "Category was successfully updated"
+        failure: "Category could not be updated"
+      destroy:
+        success: "Category was successfully destroyed"
+    orders:
+      create:
+        success: "Order was successfully created"
+        failure: "Order could not be created"
+      update:
+        success: "Order was successfully updated"
+        failure: "Order could not be updated"
+      destroy:
+        success: "Category was successfully destroyed."
+    products:
+      create:
+        success: "Product was successfully created"
+        failure: "Product could not be created"
+      update:
+        success: "Product was successfully updated"
+        failure: "Product could not be updated"
+      destroy:
+        success: "Product was successfully destroyed"
+    stocks:
+      create:
+        success: "Stock was successfully created"
+        failure: "Stock could not be created"
+      update:
+        success: "Stock was successfully updated"
+        failure: "Stock could not be updated"
+      destroy:
+        success: "Stock was successfully destroyed"
+
