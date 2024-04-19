@@ -11,9 +11,9 @@ RSpec.describe Product, type: :model do
   end
 
   describe 'scopes' do
-    let(:category) { Category.create!(name: "Example Category") }
-    let!(:product1) { Product.create!(price: 300, category: category) }
-    let!(:product2) { Product.create!(price: 1000, category: category) }
+    let(:category) { create(:category) }
+    let!(:product1) { create(:product, category: category, price: 250) }
+    let!(:product2) { create(:product, category: category, price: 1000) }
 
     context 'max_price' do
       it 'returns products with price less than or equal to the specified max price' do
@@ -31,10 +31,10 @@ RSpec.describe Product, type: :model do
   end
 
   describe 'images variants' do
-    let(:category) { Category.create!(name: "Example Category") }
+    let(:product) { create(:product) }
 
     before do
-      @product = Product.create!(category: category)
+      @product = product
       @product.images.attach(io: File.open(Rails.root.join('spec', 'fixtures', 'files', 'test_image.png')), filename: 'test_image.png', content_type: 'image/png')
     end
 
