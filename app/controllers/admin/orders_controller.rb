@@ -19,10 +19,10 @@ class Admin::OrdersController < AdminController
 
     respond_to do |format|
       if @admin_order.save
-        format.html { redirect_to admin_order_url(@admin_order), notice: I18n.t('admin.orders.create.success') }
+        format.html { redirect_to admin_order_url(@admin_order), notice: I18n.t('admin.controllers.orders.create.success') }
         format.json { render :show, status: :created, location: @admin_order }
       else
-        format.html { render :new, status: :unprocessable_entity, notice: I18n.t('admin.orders.create.failure') }
+        format.html { render :new, status: :unprocessable_entity, notice: I18n.t('admin.controllers.orders.create.failure') }
         format.json { render json: @admin_order.errors, status: :unprocessable_entity }
       end
     end
@@ -31,10 +31,10 @@ class Admin::OrdersController < AdminController
   def update
     respond_to do |format|
       if @admin_order.update(admin_order_params)
-        format.html { redirect_to admin_order_url(@admin_order), notice: I18n.t('admin.orders.update.success') }
+        format.html { redirect_to admin_order_url(@admin_order), notice: I18n.t('admin.controllers.orders.update.success') }
         format.json { render :show, status: :ok, location: @admin_order }
       else
-        format.html { render :edit, status: :unprocessable_entity, notice: I18n.t('admin.orders.update.failure') }
+        format.html { render :edit, status: :unprocessable_entity, notice: I18n.t('admin.controllers.orders.update.failure') }
         format.json { render json: @admin_order.errors, status: :unprocessable_entity }
       end
     end
@@ -44,7 +44,7 @@ class Admin::OrdersController < AdminController
     @admin_order.destroy!
 
     respond_to do |format|
-      format.html { redirect_to admin_orders_url, notice: I18n.t('admin.orders.destroy.success') }
+      format.html { redirect_to admin_orders_url, notice: I18n.t('admin.controllers.orders.destroy.success') }
       format.json { head :no_content }
     end
   end

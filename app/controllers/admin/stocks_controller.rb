@@ -19,10 +19,10 @@ class Admin::StocksController < AdminController
 
     respond_to do |format|
       if @admin_stock.save
-        format.html { redirect_to admin_product_stock_url(@product, @admin_stock), notice: I18n.t('admin.stocks.create.success') }
+        format.html { redirect_to admin_product_stock_url(@product, @admin_stock), notice: I18n.t('admin.controllers.stocks.create.success') }
         format.json { render :show, status: :created, location: @admin_stock }
       else
-        format.html { render :new, status: :unprocessable_entity, notice: I18n.t('admin.stocks.create.failure') }
+        format.html { render :new, status: :unprocessable_entity, notice: I18n.t('admin.controllers.stocks.create.failure') }
         format.json { render json: @admin_stock.errors, status: :unprocessable_entity }
       end
     end
@@ -31,10 +31,10 @@ class Admin::StocksController < AdminController
   def update
     respond_to do |format|
       if @admin_stock.update(admin_stock_params)
-        format.html { redirect_to admin_product_stock_url(@admin_stock.product, @admin_stock), notice: I18n.t('admin.stocks.update.success') }
+        format.html { redirect_to admin_product_stock_url(@admin_stock.product, @admin_stock), notice: I18n.t('admin.controllers.stocks.update.success') }
         format.json { render :show, status: :ok, location: @admin_stock }
       else
-        format.html { render :edit, status: :unprocessable_entity, notice: I18n.t('admin.stocks.update.failure') }
+        format.html { render :edit, status: :unprocessable_entity, notice: I18n.t('admin.controllers.stocks.update.failure') }
         format.json { render json: @admin_stock.errors, status: :unprocessable_entity }
       end
     end
@@ -44,7 +44,7 @@ class Admin::StocksController < AdminController
     @admin_stock.destroy!
 
     respond_to do |format|
-      format.html { redirect_to admin_product_stocks_url, notice: I18n.t('admin.stocks.destroy.success') }
+      format.html { redirect_to admin_product_stocks_url, notice: I18n.t('admin.controllers.stocks.destroy.success') }
       format.json { head :no_content }
     end
   end

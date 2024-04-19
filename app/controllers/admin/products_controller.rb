@@ -22,10 +22,10 @@ class Admin::ProductsController < AdminController
 
     respond_to do |format|
       if @admin_product.save
-        format.html { redirect_to admin_product_url(@admin_product), notice: I18n.t('admin.products.create.success') }
+        format.html { redirect_to admin_product_url(@admin_product), notice: I18n.t('admin.controllers.products.create.success') }
         format.json { render :show, status: :created, location: @admin_product }
       else
-        format.html { render :new, status: :unprocessable_entity, notice: I18n.t('admin.products.create.failure') }
+        format.html { render :new, status: :unprocessable_entity, notice: I18n.t('admin.controllers.products.create.failure') }
         format.json { render json: @admin_product.errors, status: :unprocessable_entity }
       end
     end
@@ -37,7 +37,7 @@ class Admin::ProductsController < AdminController
         @admin_product.images.attach(image)
       end
 
-      redirect_to admin_product_path, notice: I18n.t('admin.products.update.success')
+      redirect_to admin_product_path, notice: I18n.t('admin.controllers.products.update.success')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -47,7 +47,7 @@ class Admin::ProductsController < AdminController
     @admin_product.destroy!
 
     respond_to do |format|
-      format.html { redirect_to admin_products_url, notice: I18n.t('admin.products.destroy.success') }
+      format.html { redirect_to admin_products_url, notice: I18n.t('admin.controllers.products.destroy.success') }
       format.json { head :no_content }
     end
   end

@@ -18,10 +18,10 @@ class Admin::CategoriesController < AdminController
 
     respond_to do |format|
       if @admin_category.save
-        format.html { redirect_to admin_category_url(@admin_category), notice: I18n.t('admin.categories.create.success') }
+        format.html { redirect_to admin_category_url(@admin_category), notice: I18n.t('admin.controllers.categories.create.success') }
         format.json { render :show, status: :created, location: @admin_category }
       else
-        format.html { render :new, status: :unprocessable_entity, notice: I18n.t('admin.categories.create.failure') }
+        format.html { render :new, status: :unprocessable_entity, notice: I18n.t('admin.controllers.categories.create.failure') }
         format.json { render json: @admin_category.errors, status: :unprocessable_entity }
       end
     end
@@ -30,10 +30,10 @@ class Admin::CategoriesController < AdminController
   def update
     respond_to do |format|
       if @admin_category.update(admin_category_params)
-        format.html { redirect_to admin_category_url(@admin_category), notice: I18n.t('admin.categories.update.success') }
+        format.html { redirect_to admin_category_url(@admin_category), notice: I18n.t('admin.controllers.categories.update.success') }
         format.json { render :show, status: :ok, location: @admin_category }
       else
-        format.html { render :edit, status: :unprocessable_entity, notice: I18n.t('admin.categories.update.failure') }
+        format.html { render :edit, status: :unprocessable_entity, notice: I18n.t('admin.controllers.categories.update.failure') }
         format.json { render json: @admin_category.errors, status: :unprocessable_entity }
       end
     end
@@ -43,7 +43,7 @@ class Admin::CategoriesController < AdminController
     @admin_category.destroy!
 
     respond_to do |format|
-      format.html { redirect_to admin_categories_url, notice: I18n.t('admin.categories.destroy.success') }
+      format.html { redirect_to admin_categories_url, notice: I18n.t('admin.controllers.categories.destroy.success') }
       format.json { head :no_content }
     end
   end
