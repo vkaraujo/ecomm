@@ -16,4 +16,4 @@ To run a report use:
 COVERAGE=true bundle exec rspec
 ```
 The image below is just an example and won't be updated in a regular manner
-![Test Coverage](coverage_report.png)
+![Test Coverage](app/assets/coverage_report.png)
