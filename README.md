@@ -1,24 +1,19 @@
-# README
+# E-Commerce Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Contributing
 
-Things you may want to cover:
+While this project is primarily for my personal development, I'm open to contributions, suggestions, and discussions on different solutions to these problems. Feel free to open an issue or a pull request if you have any inputs or corrections.
 
-* Ruby version
+## License
+[MIT License](https://opensource.org/licenses/MIT)
 
-* System dependencies
+# Gems and Extra Features
 
-* Configuration
+## Simple-Cov report
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run a report use:
+```bash
+COVERAGE=true bundle exec rspec
+```
+The image below is just an example and won't be updated in a regular manner
+![Test Coverage](coverage_report.png)
