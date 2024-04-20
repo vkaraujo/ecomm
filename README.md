@@ -12,16 +12,24 @@ While this project is primarily for my personal development, I'm open to contrib
 
 In addition to Ruby on Rails and the gems listed above, this project utilizes several modern web technologies to enhance interactivity and style:
 
-![tailwind image](app/assets/tailwindcss.png)
+<p>
+  <img src="app/assets/tailwindcss.png" alt="tailwind image" width="200"/>
+</p>
 - **[Tailwind CSS](https://tailwindcss.com/docs)**: A utility-first CSS framework for rapidly building custom user interfaces. Tailwind provides low-level utility classes that help you build completely custom designs without ever leaving your HTML.
 
-![stimulus image](app/assets/stimulus.png)
+<p>
+  <img src="app/assets/stimulus.png" alt="stimulus image" width="200"/>
+</p>
 - **[Stimulus](https://stimulus.hotwired.dev/)**: A modest JavaScript framework for the HTML you already have. Stimulus is designed to augment your HTML by bringing functionality to the web with just a little bit of JavaScript.
 
-![turbo image](app/assets/turbo.png)
+<p>
+  <img src="app/assets/turbo.png" alt="turbo image" width="200"/>
+</p>
 - **[Turbo](https://turbo.hotwired.dev/)**: Part of the Hotwire suite, Turbo uses techniques from TurboLinks and expands upon them to offer fast navigation and interactions without the need for full page reloads. It allows Rails to deliver fast, rich, interactive applications.
 
-![Hotwire image](app/assets/hotwire.png)
+<p>
+  <img src="app/assets/hotwire.png" alt="Hotwire image" width="200"/>
+</p>
 - **[Hotwire](https://hotwired.dev/)**: An alternative approach to building modern web applications without using much JavaScript by sending HTML instead of JSON over the wire. This makes for faster page loads and re-renders.
 
 
