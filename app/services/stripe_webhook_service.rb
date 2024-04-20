@@ -51,7 +51,7 @@ class StripeWebhookService
   end
 
   def process_line_items(session, order)
-    full_session = Stripe::Checkout::Session.retrieve(id: session.id, expand: ['line_items'])
+    full_session = Stripe::Checkout::Session.retrieve(id: session['id'], expand: ['line_items'])
     line_items = full_session.line_items
     line_items["data"].each do |item|
       process_individual_item(item, order)

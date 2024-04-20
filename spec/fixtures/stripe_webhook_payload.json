@@ -1,0 +1,22 @@
+{
+  "id": "evt_1HkX72LJ5l9GsyQqthGEZVJC",
+  "object": "event",
+  "api_version": "2020-08-27",
+  "created": 1598515400,
+  "data": {
+    "object": {
+      "id": "cs_test_a1D0nH2o3jEWbFQi1fWg1SUq6W",
+      "object": "checkout.session",
+      "billing_address_collection": "required",
+      "cancel_url": "http://localhost:3000/cancel",
+      "client_reference_id": "12345",
+      "currency": "usd",
+      "livemode": false,
+      "locale": "en",
+      "payment_intent": "pi_1HkX72LJ5l9GsyQq1clEXQ5f",
+      "payment_status": "paid",
+      "success_url": "http://localhost:3000/success"
+    }
+  },
+  "type": "checkout.session.completed"
+}

@@ -6,6 +6,10 @@ if ENV['COVERAGE']
     add_filter '/spec/'
     add_filter '/config/'
     add_filter '/vendor/'
+    add_filter '/mailers/application_mailer.rb'
+    add_filter '/jobs/application_job.rb'
+    add_filter '/channels/application_cable/connection.rb'
+    add_filter '/channels/application_cable/channel.rb'
 
     add_group "Models", "app/models"
     add_group "Controllers", "app/controllers"
